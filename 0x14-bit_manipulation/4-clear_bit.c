@@ -1,6 +1,15 @@
 #include "main.h"
 #include <stdio.h>
-int clear_bit(unsigned long int *z, unsigned int index)
+
+/**
+ * clear_bit - set the value of a bit to 0 at a given index
+ * @n: pointer to decimal number to change
+ * @index: index position to change
+ 
+ * Return: 1 if it worked, -1 if error
+ */
+
+int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int i;
 	unsigned int hold;
@@ -11,8 +20,8 @@ int clear_bit(unsigned long int *z, unsigned int index)
 	for (i = 1; hold > 0; i *= 2, hold--)
 		;
 
-	if ((*z >> index) & 1)
-		*z -= i;
+	if ((*n >> index) & 1)
+		*n -= i;
 
 	return (1);
 }
