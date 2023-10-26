@@ -1,6 +1,14 @@
 #include "main.h"
 
-int set_bit(unsigned long int *z, unsigned int index)
+/**
+ * set_bit - sets value of a bit to 1 at a given index
+ * @n: decimal number passed by pointer
+ 
+ * @index: index position to change, starting from 0
+ 
+ * Return: 1 if it worked, -1 if error
+ */
+int set_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int p;
 
@@ -9,7 +17,7 @@ int set_bit(unsigned long int *z, unsigned int index)
 
 	for (p = 1; index > 0; index--, p *= 2)
 		;
-	*z += p;
+	*n += p;
 
 	return (1);
 }
