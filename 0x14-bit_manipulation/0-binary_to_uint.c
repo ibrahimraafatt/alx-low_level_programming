@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
  * binary_to_uint - convert a binary number to an unsigned int
  * @b: char string
@@ -9,6 +10,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int total, power;
 	int len;
+
 	if (b == NULL)
 		return (0);
 
